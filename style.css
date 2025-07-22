@@ -121,6 +121,9 @@ img {
 
 /* Laptop/tab responsive */
 @media screen and (max-width: 992px) {
+  .container {
+    margin: 0 20px;
+  }
   .upcoming-matches {
     flex-direction: column;
   }
@@ -144,9 +147,13 @@ img {
 
 /* Mobile responsive */
 @media screen and (max-width: 768px) {
+  .container {
+    margin: 0 10px;
+  }
   .banner {
     flex-direction: column;
     text-align: center;
+    margin-top: 20px;
   }
   .banner .banner-left {
     margin-bottom: 50px;
@@ -155,5 +162,13 @@ img {
   }
   .banner .banner-left p {
     margin: 15px auto;
+  }
+  .upcoming-matches-right {
+    grid-template-columns: 1fr;
+  }
+  .upcoming-matches-left {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
   }
 }
