@@ -5,6 +5,9 @@
   padding: 0;
   font-family: "Poppins", sans-serif;
 }
+img {
+  max-width: 100%;
+}
 .container {
   max-width: 1280px;
   margin: auto;
@@ -21,7 +24,7 @@
 
 /* banner styles */
 
-.Banner {
+.banner {
   display: flex;
   align-items: center;
   background-color: black;
@@ -31,6 +34,7 @@
 }
 .banner-left {
   padding-left: 80px;
+  flex: 1;
 }
 
 .banner-left h2 {
@@ -45,6 +49,9 @@
 }
 .banner-right img {
   display: block;
+}
+.banner-right {
+  flex: 1;
 }
 /* upcoming-matches */
 .upcoming-matches {
@@ -79,6 +86,9 @@
 
 .upcoming-matches-right {
   flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
 }
 .upcoming-matches-right .card {
   border: 1px solid rgb(232, 232, 232);
@@ -107,4 +117,43 @@
   color: #161616a8;
   display: flex;
   gap: 20px;
+}
+
+/* Laptop/tab responsive */
+@media screen and (max-width: 992px) {
+  .upcoming-matches {
+    flex-direction: column;
+  }
+  .upcoming-matches-left {
+    flex-direction: row;
+    width: 100%;
+    background-color: transparent;
+  }
+  .upcoming-matches-left > * {
+    flex: 1;
+  }
+  .upcoming-matches-left .btn {
+    border: 1px solid rgb(232, 232, 232);
+    border-radius: 10px;
+  }
+  .banner-left h2 {
+    font-size: 50px;
+    line-height: 50px;
+  }
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .banner .banner-left {
+    margin-bottom: 50px;
+    padding-left: 0;
+    padding-top: 30px;
+  }
+  .banner .banner-left p {
+    margin: 15px auto;
+  }
 }
